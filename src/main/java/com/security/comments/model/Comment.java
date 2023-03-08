@@ -21,10 +21,10 @@ public class Comment {
     @Column(name = "body", nullable = false)
     private String body;
 
-    @Column(name = "postId", nullable = false)
+    @Column(name = "post_id", nullable = false)
     private long postId;
 
-    @Column(name = "username", nullable = false)
+    @Column(name = "user_name", nullable = false)
     private String username;
 
     @Column(name = "updated_at", nullable = false, updatable = false)
