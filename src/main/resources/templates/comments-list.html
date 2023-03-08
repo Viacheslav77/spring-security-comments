@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org" lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <title>List of Users</title>
+</head>
+<body>
+<div th:replace="header"></div>
+<div class="col-md-offset-2 col-sm-8">
+    <h2 class="text-center text-white pt-5" >List of Comments</h2>
+
+    <table class="table">
+        <thead>
+        <tr>
+            <th scope="col">Id</th>
+            <th scope="col">body</th>
+            <th scope="col">postId</th>
+            <th scope="col">username </th>
+            <th scope="col">updatedAt</th>
+        </tr>
+        </thead>
+        <tbody>
+        <tr th:each="comment, iStat: ${comments}">
+
+            <td th:text="${comment.id}"/>
+            <td th:text="${comment.body}"/>
+            <td th:text="${comment.postId}"/>
+            <td th:text="${comment.username}"/>
+            <td th:text="${comment.updatedAt}"/>
+            <td>
+        </tr>
+    </table>
+</div>
+</body>
+</html>
