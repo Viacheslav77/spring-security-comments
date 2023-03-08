@@ -42,8 +42,9 @@
             <input type="email" class="form-control" th:field="*{email}" id="email"/>
             <small class="form-text text-muted" th:if="${#fields.hasErrors('email')}" th:errors="*{email}"></small>
         </div>
+        
     </div>
-    <div>
+    <div class="text-center text-white pt-5">
         <input type="submit" class="btn btn-info" value="Register"/>
         <input type="reset" class="btn btn" value="Clear"/>
     </div>
